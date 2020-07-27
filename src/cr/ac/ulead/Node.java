@@ -1,8 +1,10 @@
 package cr.ac.ulead;
 
+import cr.ac.ulead.modelos.Persona;
+
 public class Node {
 
-	public int data; 
+	public Persona data;
 	public Node leftChild; 
 	public Node rightChild; 
 
