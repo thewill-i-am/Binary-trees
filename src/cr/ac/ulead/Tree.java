@@ -22,25 +22,25 @@ public class Tree {
             Node parent;
             while (true) {
                 parent = current;
-                if (newData.getFechaNacimiento().compareTo(current.data.getFechaNacimiento()) < 0) {
+                if (newData.getFechaNacimiento().compareTo(current.data.getFechaNacimiento()) > 0) {
                     current = current.leftChild;
                     if (current == null) {
                         parent.leftChild = newNode;
                         return;
                     }
-                } else if (newData.getFechaNacimiento().compareTo(current.data.getFechaNacimiento()) > 0) {
+                } else if (newData.getFechaNacimiento().compareTo(current.data.getFechaNacimiento()) < 0) {
                     current = current.rightChild;
                     if (current == null) {
                         parent.rightChild = newNode;
                         return;
                     }
-                } else if (Integer.parseInt(newData.getCedula()) < Integer.parseInt(current.data.getCedula())) {
+                } else if (Integer.parseInt(newData.getCedula()) > Integer.parseInt(current.data.getCedula())) {
                     current = current.leftChild;
                     if (current == null) {
                         parent.leftChild = newNode;
                         return;
                     }
-                } else if (Integer.parseInt(newData.getCedula()) > Integer.parseInt(current.data.getCedula())) {
+                } else if (Integer.parseInt(newData.getCedula()) < Integer.parseInt(current.data.getCedula())) {
                     current = current.rightChild;
                     if (current == null) {
                         parent.rightChild = newNode;
